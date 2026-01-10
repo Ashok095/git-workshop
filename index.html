@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -11,21 +11,27 @@
 
 <body>
     <div id="app"></div>
+
     <!-- Docsify core -->
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-    <!-- Optional plugins -->
+    <!-- Search plugin -->
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+
     <script>
         window.$docsify = {
             name: 'Sessions',
-            loadSidebar: true,               // uses _sidebar.md
-            subMaxLevel: 2,                  // heading depth for sidebar
-            alias: {                         // map route to file if needed
-                '/': '/README.md'
+            repo: '', // optional: link to your GitHub repo
+            loadSidebar: true,          // uses _sidebar.md
+            subMaxLevel: 2,             // heading depth for sidebar
+            relativePath: true,         // Fix for GitHub Pages subfolder
+            alias: {
+                '/': '/README.md'         // default landing page
             },
-            search: 'auto'
+            search: 'auto',             // enable search
+            themeColor: '#42b983'       // optional: customize theme color
         };
     </script>
 </body>
 
 </html>
+``
