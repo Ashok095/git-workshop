@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,38 +8,46 @@
 
   <!-- Docsify theme - you can change to: vue.css, buble.css, dark.css, pure.css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism.min.css">
   <!-- Optional: Add your own custom styles -->
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     }
+
     .sidebar {
       background: #f8f9fa;
       border-right: 1px solid #e9ecef;
     }
+
     .app-name-link {
       color: #2c7be5 !important;
       font-weight: 600;
     }
-    .markdown-section h1, .markdown-section h2 {
+
+    .markdown-section h1,
+    .markdown-section h2 {
       border-bottom: 2px solid #2c7be5;
       padding-bottom: 0.3em;
     }
   </style>
 </head>
+
 <body>
   <!-- This is where Docsify renders everything -->
   <div id="app"></div>
 
   <!-- Core Docsify -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
 
   <!-- Useful plugins -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-script.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
+  
   <!-- Configuration -->
   <script>
     window.$docsify = {
@@ -74,10 +83,20 @@
       nameLink: {
         '/': '/'                      // Link logo/name to home
       },
+      copyCode: {
+        buttonText: {
+          '/': 'Copy',           // default
+          '/en/': 'Copy',        // if you ever add language prefix
+        },
+        errorText: 'Error',
+        successText: 'Copied!'
+      },
 
       // Optional: better experience on mobile
-      mergeNavbar: true
+      mergeNavbar: true,
+      noCompileLinks: ['/'],
     }
   </script>
 </body>
+
 </html>
