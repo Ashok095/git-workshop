@@ -1,6 +1,24 @@
+# Welcome to Git Workshop! 🛠️
 
-# Welcome to Git Workshop
+This site contains **practical, hands-on sessions** about Git and GitHub workflows — designed for beginners to intermediate users.
 
-This site contains sessions on Git and GitHub workflows.
+### How to use this site
 
-Use the sidebar to navigate through the sessions.
+- Use the **sidebar** on the left to navigate between sessions  
+- Use the **search box** (top left) to quickly find any topic  
+- All content is written in plain Markdown — easy to read & follow along
+
+Happy learning and happy coding! 🚀
+
+---
+**Quick navigation** (in case sidebar is hidden):
+
+- [Session 1](session-1) — Git Basics & First Commands  
+- [Session 2](session-2) — Working with Branches  
+- [Session 3](session-3) — Merging & Resolving Conflicts  
+- [Session 4](session-4) — Remote Repositories & GitHub  
+- [Session 5](session-5) — Pull Requests & Code Review  
+- [Session 6](session-6) — Rebasing vs Merging  
+- [Session 7](session-7) — Git Stash, Reset & Revert  
+- [Session 8](session-8) — Advanced Workflows & Best Practices  
+- [Session 9](session-9) — Git Hooks & Automation

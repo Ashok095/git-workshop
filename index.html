@@ -1,36 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <title>Sessions</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Theme (you can swap to vue.css, buble.css, pure.css etc.) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GIT WORKSHOP Sessions</title>
+
+  <!-- Docsify theme - you can change to: vue.css, buble.css, dark.css, pure.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
+
+  <!-- Optional: Add your own custom styles -->
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+    .sidebar {
+      background: #f8f9fa;
+      border-right: 1px solid #e9ecef;
+    }
+    .app-name-link {
+      color: #2c7be5 !important;
+      font-weight: 600;
+    }
+    .markdown-section h1, .markdown-section h2 {
+      border-bottom: 2px solid #2c7be5;
+      padding-bottom: 0.3em;
+    }
+  </style>
 </head>
-
 <body>
-    <div id="app"></div>
+  <!-- This is where Docsify renders everything -->
+  <div id="app"></div>
 
-    <!-- Docsify core -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-    <!-- Search plugin -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <!-- Core Docsify -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
 
-    <script>
-        window.$docsify = {
-            name: 'Sessions',
-            repo: '', // optional: link to your GitHub repo
-            loadSidebar: true,          // uses _sidebar.md
-            subMaxLevel: 2,             // heading depth for sidebar
-            relativePath: true,         // Fix for GitHub Pages subfolder
-            alias: {
-                '/': '/README.md'         // default landing page
-            },
-            search: 'auto',             // enable search
-            themeColor: '#42b983'       // optional: customize theme color
-        };
-    </script>
+  <!-- Useful plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-script.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+    window.$docsify = {
+      // Basic settings
+      name: 'GIT WORKSHOP',
+      repo: '',                     // e.g. 'username/repo' → enables edit button
+      homepage: 'README.md',        // File loaded when visiting root /
+
+      // Sidebar
+      loadSidebar: '_sidebar.md',   // Your sidebar file
+      subMaxLevel: 2,               // Show headings up to level 2 in sidebar
+
+      // Important for GitHub Pages
+      relativePath: true,           // Fixes relative links
+      basePath: '/',                // Use only if you have custom domain or subfolder issues
+
+      // Navigation & UX
+      auto2top: true,               // Smooth scroll to top on route change
+      alias: {
+        '/': 'README.md'            // When visiting root → load README.md
+      },
+
+      // Search
+      search: {
+        maxAge: 86400000,           // Cache search index 24h
+        paths: 'auto',              // Index all markdown files automatically
+        placeholder: 'Search...',
+        noData: 'No results!'
+      },
+
+      // Theme & appearance
+      themeColor: '#2c7be5',
+      nameLink: {
+        '/': '/'                      // Link logo/name to home
+      },
+
+      // Optional: better experience on mobile
+      mergeNavbar: true
+    }
+  </script>
 </body>
-
 </html>
