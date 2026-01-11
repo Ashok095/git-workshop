@@ -52,9 +52,9 @@ This check prevents most authentication failures before they happen.
 4. Visibility: **Public**
 5. **IMPORTANT:**
 
-   * ❌ Do NOT add README
-   * ❌ Do NOT add `.gitignore`
-   * ❌ Do NOT choose a license
+   * Do NOT add README
+   * Do NOT add `.gitignore`
+   * Do NOT choose a license
 
 > The repository must be completely empty.
 
@@ -250,6 +250,6 @@ git push
 * Authentication should happen via browser, not terminal
 * `push` sends code up, `clone` pulls everything down
 * Conflicts are normal and **not errors**
-* Humans resolve conflicts — Git only reports them
+* Humans resolve conflicts, Git only reports them
 
 ---

@@ -20,7 +20,7 @@ www.username.github.io
    * Branch: **main → /(root)**
 4. Click **Save**
 
-> Your site is not instant — GitHub will build it next.
+> Your site is not instant, GitHub will build it next.
 
 ---
 
