@@ -2,101 +2,85 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GIT WORKSHOP</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIT WORKSHOP</title>
 
-  <!-- Docsify theme - you can change to: vue.css, buble.css, dark.css, pure.css -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism.min.css">
-  <!-- Optional: Add your own custom styles -->
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    }
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
+    <!-- Prism CSS for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism.min.css">
 
-    .sidebar {
-      background: #f8f9fa;
-      border-right: 1px solid #e9ecef;
-    }
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
 
-    .app-name-link {
-      color: #2c7be5 !important;
-      font-weight: 600;
-    }
+        .sidebar {
+            background: #f8f9fa;
+            border-right: 1px solid #e9ecef;
+        }
 
-    .markdown-section h1,
-    .markdown-section h2 {
-      border-bottom: 2px solid #2c7be5;
-      padding-bottom: 0.3em;
-    }
-  </style>
+        .app-name-link {
+            color: #2c7be5 !important;
+            font-weight: 600;
+        }
+
+        .markdown-section h1,
+        .markdown-section h2 {
+            border-bottom: 2px solid #2c7be5;
+            padding-bottom: 0.3em;
+        }
+    </style>
 </head>
 
 <body>
-  <!-- This is where Docsify renders everything -->
-  <div id="app"></div>
+    <div id="app">Please wait...</div>
 
-  <!-- Core Docsify -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+    <!-- 1. CONFIGURATION MUST BE DEFINED BEFORE LOADING DOCSIFY -->
+    <script>
+        window.$docsify = {
+            name: 'GIT WORKSHOP',
+            repo: 'ashok095/git-workshop',
+            homepage: 'README.md',
+            loadSidebar: '_sidebar.md',
+            subMaxLevel: 2,
+            relativePath: true, // Keep this true for GitHub Pages
+            auto2top: true,
 
-  <!-- Useful plugins -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-script.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-core.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
-  
-  <!-- Configuration -->
-  <script>
-    window.$docsify = {
-      // Basic settings
-      name: 'GIT WORKSHOP',
-      repo: 'ashok095/git-workshop',                     // e.g. 'username/repo' → enables edit button
-      homepage: 'README.md',        // File loaded when visiting root /
+            // Fixes the logo link to go to the Repo Home, not Domain Home
+            nameLink: '#/README.md',
 
-      // Sidebar
-      loadSidebar: '_sidebar.md',   // Your sidebar file
-      subMaxLevel: 2,               // Show headings up to level 2 in sidebar
+            search: {
+                maxAge: 86400000,
+                paths: 'auto',
+                placeholder: 'Search...',
+                noData: 'No results!'
+            },
 
-      // Important for GitHub Pages
-      relativePath: true,           // Fixes relative links
-      // basePath: '/',                // Use only if you have custom domain or subfolder issues
+            themeColor: '#2c7be5',
 
-      // Navigation & UX
-      auto2top: true,               // Smooth scroll to top on route change
-      alias: {
-        '/': 'README.md'            // When visiting root → load README.md
-      },
+            copyCode: {
+                buttonText: 'Copy',
+                errorText: 'Error',
+                successText: 'Copied!'
+            }
+        }
+    </script>
 
-      // Search
-      search: {
-        maxAge: 86400000,           // Cache search index 24h
-        paths: 'auto',              // Index all markdown files automatically
-        placeholder: 'Search...',
-        noData: 'No results!'
-      },
+    <!-- 2. Core Docsify -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
 
-      // Theme & appearance
-      themeColor: '#2c7be5',
-      nameLink: {
-        '/': '/'                      // Link logo/name to home
-      },
-      copyCode: {
-        buttonText: {
-          '/': 'Copy',           // default
-          '/en/': 'Copy',        // if you ever add language prefix
-        },
-        errorText: 'Error',
-        successText: 'Copied!'
-      },
+    <!-- 3. Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-script.min.js"></script>
 
-      // Optional: better experience on mobile
-      mergeNavbar: true,
-      noCompileLinks: ['/'],
-    }
-  </script>
+    <!-- 4. Prism Languages (Add specific languages if needed, e.g., bash/git) -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
+    <!-- Force load bash for Git commands -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
 </body>
 
 </html>

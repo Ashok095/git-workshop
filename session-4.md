@@ -158,7 +158,7 @@ This is the simplest merge.
 ## The Real World Scenario
 
 You are building **Dark Mode**
-Work is incomplete;  You must not commit yet
+Work is incomplete; You must not commit yet
 
 Suddenly, critical issue on `main` You must switch immediately.
 
@@ -210,11 +210,19 @@ Create `style.css`:
 ```css
 body {
   background: black;
+  color: white;
 }
 ```
 
-Do not commit
+> Right now, the file is **untracked**.  
+> `git stash` **by default** only saves: Modifications to already **tracked** files (whether staged or unstaged)  
+> It **ignores** (**untracked**) files like `style.css`
+> We use either `-u = --include-untracked` flag or `git add style.css` first and then `git stash`.
 
+Let's add to track the file
+```bash
+git add style.css
+```
 ---
 
 ## Stash the Work
