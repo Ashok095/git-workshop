@@ -2,17 +2,17 @@
 
 ### Git vs GitHub
 
-* **Git**
+- **Git**
 
-  * A version control tool
-  * Tracks history **on your computer**
-  * Works fully offline
+  - A version control tool
+  - Tracks history **on your computer**
+  - Works fully offline
 
-* **GitHub**
+- **GitHub**
 
-  * A hosting platform for Git repositories
-  * Stores code **on the internet**
-  * Enables collaboration, backups, and deployment
+  - A hosting platform for Git repositories
+  - Stores code **on the internet**
+  - Enables collaboration, backups, and deployment
 
 > You can use **Git without GitHub**.
 > You cannot use **GitHub without Git**.
@@ -31,14 +31,20 @@ git config --global credential.helper
 
 ### Expected Result
 
-* **Windows:** `manager`
-* **macOS:** `osxkeychain`
+- **Windows:** `manager`
+- **macOS:** `osxkeychain`
+
+If not run this command
+
+```bash
+git config --global credential.helper manager
+```
 
 ### Why This Matters
 
-* GitHub **does not accept passwords** in the terminal anymore
-* Authentication must happen via **browser popup**
-* If Git asks for a password in the terminal → **STOP** and ask for help
+- GitHub **does not accept passwords** in the terminal anymore
+- Authentication must happen via **browser popup**
+- If Git asks for a password in the terminal → **STOP** and ask for help
 
 This check prevents most authentication failures before they happen.
 
@@ -52,9 +58,9 @@ This check prevents most authentication failures before they happen.
 4. Visibility: **Public**
 5. **IMPORTANT:**
 
-   * Do NOT add README
-   * Do NOT add `.gitignore`
-   * Do NOT choose a license
+   - Do NOT add README
+   - Do NOT add `.gitignore`
+   - Do NOT choose a license
 
 > The repository must be completely empty.
 
@@ -78,8 +84,8 @@ git branch -M main
 
 ### What This Does
 
-* `origin` becomes a **nickname** for the GitHub URL
-* Git now knows **where to push your code**
+- `origin` becomes a **nickname** for the GitHub URL
+- Git now knows **where to push your code**
 
 ---
 
@@ -93,17 +99,17 @@ git push -u origin main
 
 ### What to Watch For
 
-* A **browser popup** asking you to sign in
-* Click **“Sign in with browser”**
-* Approve the request
+- A **browser popup** asking you to sign in
+- Click **“Sign in with browser”**
+- Approve the request
 
 **If the terminal asks for a password:**
 Do not type anything. Pause and ask for help.
 
 ### Verify
 
-* Refresh your GitHub repository page
-* Your files should now be visible online
+- Refresh your GitHub repository page
+- Your files should now be visible online
 
 ---
 
@@ -111,8 +117,8 @@ Do not type anything. Pause and ask for help.
 
 ### Concept
 
-* `git init` → start a brand-new project
-* `git clone` → copy an existing project from the cloud
+- `git init` → start a brand-new project
+- `git clone` → copy an existing project from the cloud
 
 ### Simulate a Second Laptop
 
@@ -123,8 +129,8 @@ git clone https://github.com/YOUR_USERNAME/portfolio-site.git portfolio-laptop-2
 
 You now have:
 
-* `portfolio-site` → Laptop 1
-* `portfolio-laptop-2` → Laptop 2
+- `portfolio-site` → Laptop 1
+- `portfolio-laptop-2` → Laptop 2
 
 ---
 
@@ -194,8 +200,8 @@ Git reports a **merge conflict**.
 
 This means:
 
-* Two people changed the **same line**
-* Git cannot decide which version to keep
+- Two people changed the **same line**
+- Git cannot decide which version to keep
 
 ---
 
@@ -213,10 +219,10 @@ Open `index.html`. You will see something like:
 
 ### Rules for Resolving
 
-* `HEAD` → Your local version
-* Incoming → Remote version
-* Delete **all conflict markers**
-* Choose one version or combine them
+- `HEAD` → Your local version
+- Incoming → Remote version
+- Delete **all conflict markers**
+- Choose one version or combine them
 
 ### Example Resolution
 
@@ -238,18 +244,18 @@ git push
 
 ### Outcome
 
-* Conflict resolved
-* Remote updated
-* Both timelines are now aligned
+- Conflict resolved
+- Remote updated
+- Both timelines are now aligned
 
 ---
 
 ## Things to remember
 
-* Git works locally; GitHub is the shared cloud
-* Authentication should happen via browser, not terminal
-* `push` sends code up, `clone` pulls everything down
-* Conflicts are normal and **not errors**
-* Humans resolve conflicts, Git only reports them
+- Git works locally; GitHub is the shared cloud
+- Authentication should happen via browser, not terminal
+- `push` sends code up, `clone` pulls everything down
+- Conflicts are normal and **not errors**
+- Humans resolve conflicts, Git only reports them
 
 ---
