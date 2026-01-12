@@ -16,9 +16,10 @@ Happy learning and happy coding!
 - [Session 1](session-1) — Git Basics & First Commands  
 - [Session 2](session-2) — Working with Branches  
 - [Session 3](session-3) — Merging & Resolving Conflicts  
-<!--- [Session 4](session-4) — Remote Repositories & GitHub  
+- [Session 4](session-4) — Remote Repositories & GitHub  
 - [Session 5](session-5) — Pull Requests & Code Review  
 - [Session 6](session-6) — Rebasing vs Merging  
+<!-- Day 3 Content (Hidden for now)
 - [Session 7](session-7) — Git Stash, Reset & Revert  
 - [Session 8](session-8) — Advanced Workflows & Best Practices  
 - [Session 9](session-9) — Git Hooks & Automation -->
