@@ -213,35 +213,7 @@ Create a GitHub Issue:
 
 ---
 
-## ⚡ A
-
----
-
-## 🚀 Activity 9: Deployment — The IPO
-
-### Instructions (Both Students)
-
-1. Change repository visibility to **Public**
-2. Go to **Settings → Pages**
-3. Source: Deploy from `main`
-4. Save and wait ~60 seconds
-5. Open the generated URL
-
----
-😄 fair call — you’re absolutely right.
-For a **real bootcamp**, the **Solution Key is non-negotiable**.
-
-Below is the **missing, copy-paste ready “🔑 Solution Key – Activity 7”**, **minimally refined**, and **perfectly aligned** with the workshop you approved.
-
-You can paste this **directly after Phase 5** in your Markdown.
-
----
-
-````md
----
-
 # Solution — Activity 7
-
 
 ## Phase 1: Setup & `main` Branch
 
@@ -255,7 +227,7 @@ cd <student-name>-resume
 git add index.html
 git commit -m "chore: init project skeleton"
 git push origin main
-````
+```
 
 ---
 
@@ -298,7 +270,7 @@ git pull origin main
 
 ### Student A
 
-* Create Issue **#1** on GitHub
+- Create Issue **#1** on GitHub
 
 ---
 
@@ -387,9 +359,9 @@ GitHub will report **Merge Conflict**
 git pull origin main
 ```
 
-* Open `index.html`
-* Resolve conflict by using: `btn-success`
-* Remove all conflict markers
+- Open `index.html`
+- Resolve conflict by using: `btn-success`
+- Remove all conflict markers
 
 ```bash
 git add index.html
