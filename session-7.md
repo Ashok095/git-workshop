@@ -235,7 +235,7 @@ git push origin main
 
 ```bash
 git clone <REPO_URL>
-cd resume-alpha
+cd <student-name>
 ```
 
 ---
